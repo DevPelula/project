@@ -15,6 +15,7 @@ body{
 }
 
 .sidebar{
+    position: fixed;
     height: 100%;
     width: 240px;
     background: rgba(255, 255, 255, 0.973);
@@ -22,7 +23,7 @@ body{
 }
 
 .sidebar .logo-content .logo{
-    color: #fff;
+    color: rgb(0, 0, 0);
     display: flex;
     height: 50px;
     width: 100%;
@@ -49,7 +50,7 @@ body{
     width: 50px;
     text-align: center;
     line-height: 50px;
-    transform: translate(-50%);
+    transform: translateX(-50%);
 }
 
 .sidebar ul{
@@ -100,4 +101,70 @@ body{
     border-radius: 12px;
     line-height: 50px;
     text-align: center;
+}
+
+.sidebar .profile-content{
+    position: absolute;
+    color: black;
+    bottom: 0;
+    left: 0;
+    width: 17.5%;
+}
+
+.sidebar .profile-content .profile{
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: rgb(231, 231, 231);
+    border-radius: 6px;
+}
+
+.sidebar .profile-content .profile .profile-details{
+    display: flex;
+    align-items: center;
+}
+
+.profile .profile-details img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.profile .profile-details .name-job{
+    margin-left: 10px;
+}
+
+.profile .profile-details .name{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.profile .profile-details .job{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.profile #log-out{
+    position: absolute;
+    left: 96%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.home-content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+.home-contento #text{
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
 }
