@@ -40,3 +40,32 @@ body{
     text-transform: uppercase;
     color: white;
 }
+
+.menu-items li:hover, li:active{
+    background-color: rgba(0, 0, 0, .3);
+    transition: .4s;
+}
+
+.btn-menu{
+    margin-right: 30px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+ul.show{
+    top: 65px;
+}
+
+@media screen and (max-width: 952px){
+    .logo{
+        font-size: 30px;
+        padding-left: 35px;
+    }
+
+    .menu-itemsli a{
+        font-size: 16px;
+    }
+    
+}
