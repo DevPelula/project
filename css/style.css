@@ -179,7 +179,7 @@ body{
 .sidebar .links-name{
     opacity: 0;
     pointer-events: none;
-    transition: all 0.1s ease;
+    transition: all 0.4s ease;
 }
 
 .sidebar.active .links-name{
@@ -320,9 +320,10 @@ body{
     color: black;
     background: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 15px;
     font-size: 18px;
     border-radius: 6px;
+
 }
 
 .navigation ul li a:hover{
@@ -336,6 +337,7 @@ body{
     height: 40px;
     width: 150%;
     left: -60%;
+    padding: 25px;
     top: 0;
     border-radius: 6px;
     outline: none;
@@ -344,4 +346,5 @@ body{
     padding-left: 50px;
     font-size: 18px;
     color: black;
+    text-align: left;
 }
