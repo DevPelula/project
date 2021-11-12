@@ -2,7 +2,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title>PROYECTO: inicio</title>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
 
 		<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -32,9 +34,9 @@
 				<li>
 					<a href="#">
 						<i class='bx bx-user' ></i>
-						<span class="links-name">Mi perfil</span>
+						<span class="links-name">Perfil</span>
 					</a>
-					<span class="tooltip">Mi perfil</span>
+					<span class="tooltip">Perfil</span>
 				</li>
 				<li>
 					<a href="#">
@@ -97,5 +99,15 @@
 		<div class="home-content">
 			<div class="text">Inicio</div>
 		</div>
+
+		<script>
+			let btn = document.querySelector("#btn");
+			let sidebar = document.querySelector(".sidebar");
+			let searchBtn = document.querySelector(".bx-search");
+
+			btn.onclick = function(){
+    		sidebar.classList.toggle("active");
+			}
+		</script>
 	</body>
 </html>

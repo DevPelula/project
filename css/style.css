@@ -15,18 +15,37 @@ body{
 }
 
 .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100%;
-    width: 240px;
+    width: 78px;
     background: rgba(255, 255, 255, 0.973);
     padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+
+}
+
+.sidebar.active{
+    width: 240px;
 }
 
 .sidebar .logo-content .logo{
+    position: relative;
     color: rgb(0, 0, 0);
     display: flex;
     height: 50px;
     width: 100%;
     align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .logo-content .logo{
+    opacity: 1;
+    pointer-events: none;
 }
 
 .logo-content .logo i{
@@ -42,7 +61,7 @@ body{
 .sidebar #btn{
     position: absolute;
     color: black;
-    left: 17%;
+    left: 50%;
     top: 6px;
     font-size: 30px;
     height: 50px;
@@ -50,6 +69,10 @@ body{
     text-align: center;
     line-height: 50px;
     transform: translateX(-50%);
+}
+
+.sidebar.active #btn{
+    left: 90%;
 }
 
 .sidebar ul{
@@ -69,7 +92,7 @@ body{
     position: absolute;
     left: 122px;
     top: 0;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     border-radius: 6px;
     height: 35px;
     width: 122px;
@@ -81,6 +104,11 @@ body{
     transition: 0s;
     opacity: 0;
     pointer-events: none;
+    display: block;
+}
+
+.sidebar.active ul li .tooltip{
+    display: none;
 }
 
 .sidebar ul li:hover .tooltip{
@@ -104,6 +132,26 @@ body{
     color: black;
 }
 
+.sidebar ul li .bx-search-alt{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    z-index: 99;
+    color: black;
+    font-size: 22px;
+}
+
+.sidebar.active ul li .bx-search-alt{
+    opacity: 0;
+    transition: all 0.5 ease;
+}
+
+.sidebar ul li .bx-search-alt:hover{
+    background: black;
+    color: white;
+    
+}
+
 .sidebar ul li a{
     color: black;
     display: flex;
@@ -111,6 +159,7 @@ body{
     text-decoration: none;
     transition: all 0.4s ease;
     border-radius: 6px;
+    white-space: nowrap;
 }
 
 .sidebar ul li a:hover{
@@ -124,6 +173,17 @@ body{
     border-radius: 12px;
     line-height: 50px;
     text-align: center;
+}
+
+.sidebar .links-name{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .links-name{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .sidebar .profile-content{
@@ -140,11 +200,24 @@ body{
     padding: 10px 6px;
     height: 60px;
     border-radius: 6px;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .profile-content .profile{
+    background: none;
 }
 
 .sidebar .profile-content .profile .profile-details{
     display: flex;
     align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.sidebar.active .profile-content .profile .profile-details{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .profile .profile-details img{
@@ -170,19 +243,29 @@ body{
 
 .profile #log-out{
     position: absolute;
-    left: 88%;
+    left: 50%;
     bottom: 5px;
+    transform: translateX(-50%);
     min-width: 50px;
     line-height: 50px;
     font-size: 20px;
     border-radius: 10px;
+    text-align: center;
+    transition: all 0.4s ease;
+    background: rgb(231, 231, 231);
+}
+
+.sidebar.active .profile #log-out{
+    left: 88%;
+    background: none;
 }
 
 .home-content{
     position: absolute;
     height: 100%;
-    width: calc(100% - 240px);
-    left: 240px;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
 }
 
 .home-content .text{
@@ -190,4 +273,9 @@ body{
     font-weight: 500;
     color: black;
     margin: 12px;
+}
+
+.sidebar.active ~ .home-content{
+    width: calc(100% - 240px);
+    left: 240px;
 }
