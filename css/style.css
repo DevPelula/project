@@ -191,9 +191,17 @@ body{
     position: fixed;
     color: black;
     bottom: 0;
-    left: 0;
-    width: 17.5%;
+    left: 1%;
+    width: 5%;
     background: rgb(231, 231, 231);
+    border-radius: 6px;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .profile-content{
+    width: 17.5%;
+    left: 0%;
+    transition: all 0.4s ease;
 }
 
 .sidebar .profile-content .profile{
@@ -245,10 +253,10 @@ body{
 
 .profile #log-out{
     position: absolute;
-    left: 50%;
+    left: 40%;
     bottom: 5px;
     transform: translateX(-50%);
-    min-width: 50px;
+    min-width: 5px;
     line-height: 50px;
     font-size: 20px;
     border-radius: 10px;
@@ -280,4 +288,60 @@ body{
 .sidebar.active ~ .home-content{
     width: calc(100% - 240px);
     left: 240px;
+}
+
+/*--- Menú horizontal ---*/
+
+.navbar{
+    max-width: 100%;
+    padding: 0 10px;
+    margin: auto;
+}
+
+.navigation{
+    float: right;
+    display: block;
+    align-items: center;
+    min-height: 90px;
+    z-index: 100;
+}
+
+.navigation ul{
+    list-style: none;
+}
+
+.navigation ul li{
+    display: inline-block;
+    position: relative;
+    z-index: 1000;
+}
+
+.navigation ul li a{
+    color: black;
+    background: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.navigation ul li a:hover{
+    color: white;
+    background: black;
+    transition: all 0.4s ease;
+}
+
+.navigation ul li input{
+    position: relative;
+    height: 40px;
+    width: 150%;
+    left: -60%;
+    top: 0;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    background: rgb(231, 231, 231);
+    padding-left: 50px;
+    font-size: 18px;
+    color: black;
 }
