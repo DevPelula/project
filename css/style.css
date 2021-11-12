@@ -158,7 +158,6 @@ body{
     display: flex;
     align-items: center;
     text-decoration: none;
-    transition: all 0.4s ease;
     border-radius: 6px;
     white-space: nowrap;
 }
@@ -166,6 +165,7 @@ body{
 .sidebar ul li a:hover{
     color: white;
     background: black;
+    transition: all 0.4s ease;
 }
 
 .sidebar ul li a i{
@@ -179,7 +179,7 @@ body{
 .sidebar .links-name{
     opacity: 0;
     pointer-events: none;
-    transition: all 0.5s ease;
+    transition: all 0.1s ease;
 }
 
 .sidebar.active .links-name{
@@ -214,6 +214,7 @@ body{
     opacity: 0;
     pointer-events: none;
     white-space: nowrap;
+    transition: all 0.2s ease;
 }
 
 .sidebar.active .profile-content .profile .profile-details{
