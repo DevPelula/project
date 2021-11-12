@@ -15,7 +15,6 @@ body{
 }
 
 .sidebar{
-    position: fixed;
     height: 100%;
     width: 240px;
     background: rgba(255, 255, 255, 0.973);
@@ -42,10 +41,10 @@ body{
 
 .sidebar #btn{
     position: absolute;
-    color: #fff;
-    left: 90%;
+    color: black;
+    left: 17%;
     top: 6px;
-    font-size: 20px;
+    font-size: 30px;
     height: 50px;
     width: 50px;
     text-align: center;
@@ -64,6 +63,30 @@ body{
     margin: 0 5px;
     list-style: none;
     line-height: 50px;
+}
+
+.sidebar ul li .tooltip{
+    position: absolute;
+    left: 122px;
+    top: 0;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 122px;
+    background: white;
+    color: black;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 8px rgba(255, 255, 255, 0.973);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar ul li:hover .tooltip{
+    transition: all 0.5s ease;
+    opacity: 1;
+    top: 50%;
 }
 
 .sidebar ul li input{
@@ -109,13 +132,13 @@ body{
     bottom: 0;
     left: 0;
     width: 17.5%;
+    background: rgb(231, 231, 231);
 }
 
 .sidebar .profile-content .profile{
     position: relative;
     padding: 10px 6px;
     height: 60px;
-    background: rgb(231, 231, 231);
     border-radius: 6px;
 }
 
@@ -147,9 +170,8 @@ body{
 
 .profile #log-out{
     position: absolute;
-    left: 96%;
+    left: 88%;
     bottom: 5px;
-    transform: translateX(-50%);
     min-width: 50px;
     line-height: 50px;
     font-size: 20px;
@@ -163,8 +185,9 @@ body{
     left: 240px;
 }
 
-.home-contento #text{
+.home-content .text{
     font-size: 25px;
     font-weight: 500;
     color: black;
+    margin: 12px;
 }
