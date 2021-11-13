@@ -14,6 +14,8 @@ body{
     overflow: hidden;
 }
 
+/*--- Menú vertical ---*/
+
 .sidebar{
     position: fixed;
     top: 0;
@@ -135,11 +137,11 @@ body{
 
 .sidebar ul li .bx-search-alt{
     position: absolute;
-    top: 30%;
-    left: 25%;
+    padding: 14px;
     z-index: 99;
     color: black;
     font-size: 22px;
+    transition: all 0.5 ease;
 }
 
 .sidebar.active ul li .bx-search-alt{
@@ -148,8 +150,10 @@ body{
 }
 
 .sidebar ul li .bx-search-alt:hover{
-    background: black;
-    color: white;
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+    background-color: rgb(207, 207, 207);
+    border-radius: 6px;
     
 }
 
@@ -163,9 +167,9 @@ body{
 }
 
 .sidebar ul li a:hover{
-    color: white;
-    background: black;
+    background-color: rgb(207, 207, 207);
     transition: all 0.4s ease;
+    transform: scale(1.1);
 }
 
 .sidebar ul li a i{
@@ -254,10 +258,10 @@ body{
 .profile #log-out{
     position: absolute;
     left: 40%;
-    bottom: 5px;
-    transform: translateX(-50%);
-    min-width: 5px;
-    line-height: 50px;
+    bottom: 0;
+    transform: translateX(-40%);
+    min-width: 65px;
+    line-height: 60px;
     font-size: 20px;
     border-radius: 10px;
     text-align: center;
@@ -265,9 +269,18 @@ body{
     background: rgb(231, 231, 231);
 }
 
+.profile #log-out:hover{
+    background-color: rgb(207, 207, 207);
+    cursor: pointer;
+}
+
 .sidebar.active .profile #log-out{
-    left: 88%;
+    left: 83%;
     background: none;
+}
+
+.sidebar.active .profile #log-out:hover{
+    background-color: rgb(207, 207, 207);
 }
 
 .home-content{
@@ -279,10 +292,10 @@ body{
 }
 
 .home-content .text{
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 500;
     color: black;
-    margin: 12px;
+    margin: 15px;
 }
 
 .sidebar.active ~ .home-content{
@@ -327,8 +340,7 @@ body{
 }
 
 .navigation ul li a:hover{
-    color: white;
-    background: black;
+    background-color: rgb(207, 207, 207);
     transition: all 0.4s ease;
 }
 
@@ -347,4 +359,26 @@ body{
     font-size: 18px;
     color: black;
     text-align: left;
+}
+
+.navigation ul li #btn-submit{
+    position: absolute;
+    z-index: 99;
+    padding: 25px;
+    width: max-content;
+    left: 76%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.navigation ul li .bx-search{
+    position: absolute;
+    color: rgb(77, 77, 77);
+    left: 75%;
+    bottom: 1%;
+    font-size: 25px;
+    display: block;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: rgb(207, 207, 207);
 }

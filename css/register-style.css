@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body{
+    background-color: whitesmoke;
+    display: flex;
+    min-height: 100vh;
+}
+
+.form{
+    background-color: white;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+}
+
+.form i{
+    padding: .8rem;
+}
+
+.form-title{
+    font-size: 2rem;
+    margin-bottom: .5em;
+    text-align: center;
+}
+
+.form-paragraph{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.form-link{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    transition: all 0.4s ease;
+}
+
+.form-container{
+    margin-top: 3em;
+    display: grid;
+    gap: 4em;
+    text-align: center;
+}
+
+.form-group{
+    position: relative; 
+}
+
+.form-input{
+    width: 100%;
+    background: none;
+    font-size: 8px;
+    padding: .6em .3em;
+    border:none;
+    font-size: 1rem;
+    outline: none;
+    border-bottom: 1px solid rgb(187, 187, 187);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.form-input:focus + .form-label, .form-input:not(:placeholder-shown) + .form-label{
+    transform: translateY(-12px) scale(0.8);
+    transition: all 0.4s ease;
+    transform-origin: left top;
+    color: rgb(80, 80, 80);
+}
+
+.form-label{
+    color:rgb(187, 187, 187);
+    cursor: text;
+    position: absolute;
+    top: -10;
+    left: 12px;
+    transform: translateY(20px);
+    transition: transform 0.4s, color 0.3s;
+    transition: all 0.4s ease;
+}
+
+.form-submit{
+    background-color: rgb(243, 243, 243);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 300;
+    border: none;
+    padding: .8em 0;
+    cursor: pointer;
+}
+
+.form-line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(80, 80, 80);
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform 0.4s;
+}
+
+.form-input:focus ~ .form-line, .form-input:not(:placeholder-shown) ~ .form-line{
+    transform: scale(1);
+}
