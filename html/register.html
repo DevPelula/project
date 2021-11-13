@@ -12,23 +12,35 @@
 	</head>
 	<body>
 		<form class="form">
-            <h2 class="form-title"><i class='bx bx-landscape' ></i>Inicia sesión</h2>
-            <p class="form-paragraph">¿Aún no tienes una cuenta? <a class="form-link" href="#">¡Haz click aquí!</a></p>
+            <h2 class="form-title"><i class='bx bx-landscape' ></i>Registro</h2>
+            <p class="form-paragraph">¿Ya tienes una cuenta? <a class="form-link" href="login.html">¡Inicia sesión!</a></p>
 
             <div class="form-container">
                 <div class="form-group">
-                    <input class="form-input" type="text" id="user" placeholder=" ">
-                    <label for="user" class="form-label">Usuario: </label>
+                    <input class="form-input" type="text" id="name" placeholder=" " size="32" required>
+                    <label for="name" class="form-label">Nombre y apellido: </label>
+                    <span class="form-line"></span>
+                </div>
+                
+                <div class="form-group">
+                    <input class="form-input" type="text" id="user" placeholder="@" size="20" required>
+                    <label for="user" class="form-label" id="label-user">Usuario: </label>
                     <span class="form-line"></span>
                 </div>
 
                 <div class="form-group">
-                    <input class="form-input" type="password" id="password" placeholder=" ">
+                    <input class="form-input" type="password" id="password" placeholder=" " size="32" required>
                     <label for="password" class="form-label">Contraseña: </label>
                     <span class="form-line"></span>
                 </div>
 
-                <input type="submit" class="form-submit" value="Ingresar">
+                <div class="form-group">
+                    <input class="form-input" type="password" id="conf-password" placeholder=" " size="32" required>
+                    <label for="conf-password" class="form-label">Confirme la contraseña: </label>
+                    <span class="form-line"></span>
+                </div>
+
+                <input type="submit" class="form-submit" value="Registrarse">
             </div>
         </form>
 	</body>
