@@ -1,0 +1,75 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PROYECTO: inicio</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" type="text/css" href="../assets/css/register-style.css">
+
+		<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+		
+	</head>
+	<body>
+
+		<form class="form">
+            <h2 class="form-title"><i class='bx bx-landscape' ></i>Registro</h2>
+            <p class="form-paragraph">¿Ya tienes una cuenta? <a class="form-link" href="login.html">¡Inicia sesión!</a></p>
+
+            <div class="form-container">
+                <div class="form-group">
+                    <input class="form-input" type="text" name="name" id="name" placeholder=" " size="72" required>
+                    <label for="name" class="form-label">Nombre completo: </label>
+                    <span class="form-line"></span>
+                    <i class='bx bx-error-circle'></i>
+                    <p class="form-input-error">El nombre debe contener como mínimo 8 dígitos.</p>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-input" type="text" name="e-mail" id="e-mail" placeholder=" " size="72" required>
+                    <label for="e-mail" class="form-label">Correo electrónico: </label>
+                    <span class="form-line"></span>
+                    <i class='bx bx-error-circle'></i>
+                    <p class="form-input-error">El correo sólo puede contener letras, números, puntos, guiones y guionesbajos.</p>
+                </div>
+                
+                <div class="form-group">
+                    <input class="form-input" type="text" name="user" id="user" placeholder="@" size="16" required>
+                    <label for="user" class="form-label" id="label-user">Usuario: </label>
+                    <span class="form-line"></span>
+                    <i class='bx bx-error-circle'></i>
+                    <p class="form-input-error">El Usuario debe contener entre 4 a 16 dígitos y sólo puede contener letras, números, puntos y guines bajos.</p>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-input" type="password" name="password" id="password" placeholder=" " size="32" required>
+                    <label for="password" class="form-label">Contraseña: </label>
+                    <span class="form-line"></span>
+                    <i class='bx bx-error-circle'></i>
+                    <p class="form-input-error">La contraseña debe contener un mínimo de 8 dígitos.</p>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-input" type="password" name="conf-password" id="conf-password" placeholder=" " size="32" required>
+                    <label for="conf-password" class="form-label">Confirme la contraseña: </label>
+                    <span class="form-line"></span>
+                    <i class='bx bx-error-circle'></i>
+                    <p class="form-input-error">Las contraseñas deben ser iguales.</p>
+                </div>
+
+                <input type="submit" class="form-submit" value="Registrarse">
+            </div>
+
+            <div class="form-terms">
+                <label class="form-label">
+                    <input type="checkbox" class="form-check" name="terms" id="terms">Acepto los Términos y Condiciones.
+                </label>
+            </div>
+
+            <div class="form-message">
+                <p><i class='bx bx-message-alt-error'></i>Error: complete el formulario correctamente.</p>
+            </div>
+        </form>
+	</body>
+</html>

@@ -57,6 +57,10 @@ body{
     position: relative; 
 }
 
+.form-group #label-user{
+    padding-left: .6rem;
+}
+
 .form-input{
     width: 100%;
     background: none;
@@ -95,6 +99,12 @@ body{
     border: none;
     padding: .8em 0;
     cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.form-submit:hover{
+    background-color: rgb(218, 216, 216);
+    transition: all 0.4s ease;
 }
 
 .form-line{
@@ -110,5 +120,86 @@ body{
 }
 
 .form-input:focus ~ .form-line, .form-input:not(:placeholder-shown) ~ .form-line{
+    transform: scale(1);
+}
+
+.form-input-error{
+    display: none;
+    margin-bottom: 0;
+}
+
+.form-input-error-active{
+    display: block;
+}
+
+.form .bx-error-circle{
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+}
+
+.form .form-terms{
+    position: relative;
+    font-size: 14px;
+}
+
+.form .form-terms .form-check{
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.form .form-message{
+    padding-top: 4rem;
+    color: red;
+    display: none;
+}
+
+
+/*------Estilos para validación------*/
+
+.form .form-message-active{
+    display: block;
+}
+
+.form-group-incorrect{
+    position: relative;
+}
+
+.form-group-incorrect .form-label{
+    color: red;
+    cursor: text;
+    position: absolute;
+    top: -10;
+    left: 12px;
+    transform: translateY(20px);
+    transition: transform 0.4s, color 0.3s;
+    transition: all 0.4s ease;
+}
+
+.form-group-incorrect .form-input:focus + .form-label, .form-input:not(:placeholder-shown) + .form-label{
+    transform: translateY(-12px) scale(0.8);
+    transition: all 0.4s ease;
+    transform-origin: left top;
+    color: red;
+}
+
+.form-group-incorrect .bx-error-circle{
+    color: red;
+    opacity: 1;
+}
+
+.form-group-incorrect .form-line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: red;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform 0.4s;
+}
+
+.form-group-incorrect .form-input:focus ~ .form-line, .form-input:not(:placeholder-shown) ~ .form-line{
     transform: scale(1);
 }

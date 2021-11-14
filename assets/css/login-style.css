@@ -57,10 +57,6 @@ body{
     position: relative; 
 }
 
-.form-group #label-user{
-    padding-left: .6rem;
-}
-
 .form-input{
     width: 100%;
     background: none;
@@ -99,6 +95,12 @@ body{
     border: none;
     padding: .8em 0;
     cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.form-submit:hover{
+    background-color: rgb(218, 216, 216);
+    transition: all 0.4s ease;
 }
 
 .form-line{
